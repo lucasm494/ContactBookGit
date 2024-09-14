@@ -27,8 +27,6 @@ public class Main {
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
-    public static final String PHONE_NOT_EXIST = "Phone number does not exist.";
-
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -59,7 +57,7 @@ public class Main {
                     listAllContacts(cBook);
                     break;
                 case GET_NUMBER:
-                    getNumber(in, cBook);
+                    getNumber(in,cBook);
                     break;
                 case REPEATED:
                     getRepeated(cBook);
@@ -159,16 +157,31 @@ public class Main {
         else System.out.println(BOOK_EMPTY);
     }
 
+    /**
+     * Check if there are contacts with the same phone number (EP command).
+     * This operation always succeeds.
+     * In case there are contacts with the same phone number, the feedback message is "There are contacts that share phone numbers.".
+     * Otherwise, the feedback message is "All contacts have different phone numbers".
+     * @param cBook
+     */
     private static void getRepeated(ContactBook cBook) {
 
     }
 
-    private static void getNumber(Scanner in, ContactBook cBook) {
-        int phone;
-        phone = in.nextInt();
-        if (cBook.hasContactPhone(phone)) {
-            System.out.println(cBook.getName(phone));
+    /**
+     * Lookup a contact given its phone number (GN command).
+     * The operation receives a phone number and returns the contact with that given number.
+     * In case there are several contacts with that same phone number, the oldest contact is returned.
+     * The operation fails if: (1) the phone number does not match any contact ("Phone number does not exist.").
+     * @param cBook
+     */
+    private static void getNumber(Scanner in,ContactBook cBook) {
+        String phone;
+        phone = in.nextLine();
+        int number =Integer.parseInt(phone);
+        if (cBook.hasNumber(number)) {
+            System.out.println(cBook.getName(number));
         }
-        else System.out.println(PHONE_NOT_EXIST);
+        else System.out.println(NAME_NOT_EXIST);
     }
 }
