@@ -59,7 +59,7 @@ public class Main {
                 case GET_NUMBER:
                     getNumber(cBook);
                     break;
-                case Repeated:
+                case REPEATED:
                     getRepeated(cBook);
                     break;
                 default:
