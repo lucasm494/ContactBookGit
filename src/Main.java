@@ -56,6 +56,12 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case GET_NUMBER:
+                    getNumber(cBook);
+                    break;
+                case Repeated:
+                    getRepeated(cBook);
+                    break;
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -149,5 +155,13 @@ public class Main {
             }
         }
         else System.out.println(BOOK_EMPTY);
+    }
+
+    private static void getRepeated(ContactBook cBook) {
+
+    }
+
+    private static void getNumber(ContactBook cBook) {
+
     }
 }
