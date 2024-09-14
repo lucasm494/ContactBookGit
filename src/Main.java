@@ -61,7 +61,7 @@ public class Main {
                     getNumber(in,cBook);
                     break;
                 case REPEATED:
-                    getRepeated(cBook);
+                    getRepeated(in,cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -165,8 +165,12 @@ public class Main {
      * Otherwise, the feedback message is "All contacts have different phone numbers".
      * @param cBook
      */
-    private static void getRepeated(ContactBook cBook) {
-
+    private static void getRepeated(Scanner in,ContactBook cBook) {
+        int number;
+        number = in.nextInt();
+        in.nextLine();
+        if (cBook.isRepeated(number)) {
+        }
     }
 
     /**
@@ -176,7 +180,7 @@ public class Main {
      * The operation fails if: (1) the phone number does not match any contact ("Phone number does not exist.").
      * @param cBook
      */
-    private static void getNumber(Scanner in,ContactBook cBook) {
+    private static void getNumber(Scanner in, ContactBook cBook) {
         String phone;
         phone = in.nextLine();
         int number =Integer.parseInt(phone);
@@ -186,3 +190,5 @@ public class Main {
         else System.out.println(PHONE_NOT_EXIST);
     }
 }
+
+

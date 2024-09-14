@@ -75,6 +75,7 @@ public class ContactBook {
         if (found) result = i;
         return result;
     }
+
     private int searchIndexNumber(int phone) {
         int i = 0;
         int result = -1;
@@ -88,6 +89,9 @@ public class ContactBook {
         return result;
     }
 
+    public boolean isRepeated (int phone){
+        return searchIndexNumber(phone) > 1 ;
+    }
 
     private void resize() {
         Contact tmp[] = new Contact[2*contacts.length];
@@ -109,7 +113,7 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-    public Contact getName(int phone){return null;}
+    public String getName(int phone){return contacts[searchIndexNumber(phone)].getName();}
 
     public Contact getRepeated(int phone){return null;}
 }
