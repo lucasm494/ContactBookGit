@@ -27,7 +27,7 @@ public class Main {
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
-    public static final String PHONE_NOT_EXIST = "Phone number does not exist.";
+    public static final String PHONE_NOT_EXIST = "Phone number does not exist. TESTE";
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
