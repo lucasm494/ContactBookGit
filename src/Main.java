@@ -15,7 +15,7 @@ public class Main {
     public static final String LIST_CONTACTS  = "LC";
     public static final String QUIT           = "Q";
     public static final String GET_NUMBER = "GN";
-    public static final String Repeated= "EP";
+    public static final String REPEATED= "EP";
 
 
     //Constantes que definem as mensagens para o utilizador
