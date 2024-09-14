@@ -166,15 +166,14 @@ public class Main {
      * This operation always succeeds.
      * In case there are contacts with the same phone number, the feedback message is "There are contacts that share phone numbers.".
      * Otherwise, the feedback message is "All contacts have different phone numbers".
-     * @param cBook
      */
     private static void getRepeated(Scanner in,ContactBook cBook) {
         int number;
         number = in.nextInt();
         in.nextLine();
         if (cBook.isRepeated(number)) {
-
-        }
+            System.out.println(SHARED_NUMBERS);
+        }else System.out.println(DIF_NUMBERS);
     }
 
     /**
@@ -182,7 +181,6 @@ public class Main {
      * The operation receives a phone number and returns the contact with that given number.
      * In case there are several contacts with that same phone number, the oldest contact is returned.
      * The operation fails if: (1) the phone number does not match any contact ("Phone number does not exist.").
-     * @param cBook
      */
     private static void getNumber(Scanner in, ContactBook cBook) {
         String phone;
