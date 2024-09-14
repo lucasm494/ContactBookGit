@@ -19,6 +19,9 @@ public class ContactBook {
     public boolean hasContact(String name) {
         return searchIndex(name) >= 0;
     }
+    public boolean hasNumber(int phone) {
+        return searchIndexNumber(phone) >= 0;
+    }
 
     public int getNumberOfContacts() {
         return counter;

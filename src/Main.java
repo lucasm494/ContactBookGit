@@ -57,7 +57,7 @@ public class Main {
                     listAllContacts(cBook);
                     break;
                 case GET_NUMBER:
-                    getNumber(cBook);
+                    getNumber(in,cBook);
                     break;
                 case REPEATED:
                     getRepeated(cBook);
@@ -175,7 +175,13 @@ public class Main {
      * The operation fails if: (1) the phone number does not match any contact ("Phone number does not exist.").
      * @param cBook
      */
-    private static void getNumber(ContactBook cBook) {
-
+    private static void getNumber(Scanner in,ContactBook cBook) {
+        String phone;
+        phone = in.nextLine();
+        int number =Integer.parseInt(phone);
+        if (cBook.hasNumber(number)) {
+            System.out.println(cBook.getName(number));
+        }
+        else System.out.println(NAME_NOT_EXIST);
     }
 }
