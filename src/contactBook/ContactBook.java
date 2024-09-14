@@ -88,18 +88,26 @@ public class ContactBook {
         if (found) result = i;
         return result;
     }
+    private int searchRepeated(int phone) {
+        int i = 0;
+        int r = 0;
+        while (i<counter){
+            if (contacts[i].getPhone()== phone)
+                r++;
+            i++;
+        }
+        return r;
+    }
 
     public boolean isRepeated() {
         initializeIterator();
         while (hasNext()){
             Contact c = next();
-            if (searchIndexNumber(c.getPhone()) > 1 ) {
+            if (searchRepeated(c.getPhone()) > 1 ) {
                 return true;
             }
         }
-        if (searchIndexNumber(contacts[currentContact].getPhone()) >1) {
-            return true;
-        }else return false;
+        return false;
     }
 
     private void resize() {
@@ -124,5 +132,4 @@ public class ContactBook {
 
     public String getName(int phone){return contacts[searchIndexNumber(phone)].getName();}
 
-    public Contact getRepeated(int phone){return null;}
 }
