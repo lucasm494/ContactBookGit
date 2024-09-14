@@ -157,10 +157,24 @@ public class Main {
         else System.out.println(BOOK_EMPTY);
     }
 
+    /**
+     * Check if there are contacts with the same phone number (EP command).
+     * This operation always succeeds.
+     * In case there are contacts with the same phone number, the feedback message is "There are contacts that share phone numbers.".
+     * Otherwise, the feedback message is "All contacts have different phone numbers".
+     * @param cBook
+     */
     private static void getRepeated(ContactBook cBook) {
 
     }
 
+    /**
+     * Lookup a contact given its phone number (GN command).
+     * The operation receives a phone number and returns the contact with that given number.
+     * In case there are several contacts with that same phone number, the oldest contact is returned.
+     * The operation fails if: (1) the phone number does not match any contact ("Phone number does not exist.").
+     * @param cBook
+     */
     private static void getNumber(ContactBook cBook) {
 
     }
