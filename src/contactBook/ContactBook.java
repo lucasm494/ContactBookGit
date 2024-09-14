@@ -89,8 +89,17 @@ public class ContactBook {
         return result;
     }
 
-    public boolean isRepeated (int phone){
-        return searchIndexNumber(phone) > 1 ;
+    public boolean isRepeated() {
+        initializeIterator();
+        while (hasNext()){
+            Contact c = next();
+            if (searchIndexNumber(c.getPhone()) > 1 ) {
+                return true;
+            }
+        }
+        if (searchIndexNumber(contacts[currentContact].getPhone()) >1) {
+            return true;
+        }else return false;
     }
 
     private void resize() {

@@ -64,7 +64,7 @@ public class Main {
                     getNumber(in,cBook);
                     break;
                 case REPEATED:
-                    getRepeated(in,cBook);
+                    getRepeated(cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -167,11 +167,8 @@ public class Main {
      * In case there are contacts with the same phone number, the feedback message is "There are contacts that share phone numbers.".
      * Otherwise, the feedback message is "All contacts have different phone numbers".
      */
-    private static void getRepeated(Scanner in,ContactBook cBook) {
-        int number;
-        number = in.nextInt();
-        in.nextLine();
-        if (cBook.isRepeated(number)) {
+    private static void getRepeated(ContactBook cBook) {
+        if (cBook.isRepeated()) {
             System.out.println(SHARED_NUMBERS);
         }else System.out.println(DIF_NUMBERS);
     }
