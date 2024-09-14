@@ -109,6 +109,7 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-    public String getName(int phone){return contacts[searchIndexNumber(phone)].getName();}
+    public Contact getName(int phone){return null;}
+
     public Contact getRepeated(int phone){return null;}
 }
