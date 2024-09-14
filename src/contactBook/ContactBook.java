@@ -72,6 +72,19 @@ public class ContactBook {
         if (found) result = i;
         return result;
     }
+    private int searchIndexNumber(int phone) {
+        int i = 0;
+        int result = -1;
+        boolean found = false;
+        while (i<counter && !found)
+            if (contacts[i].getPhone()== phone)
+                found = true;
+            else
+                i++;
+        if (found) result = i;
+        return result;
+    }
+
 
     private void resize() {
         Contact tmp[] = new Contact[2*contacts.length];
@@ -93,7 +106,6 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-    public Contact getName(int phone){return null;
-    }
+    public Contact getName(int phone){return null;}
     public Contact getRepeated(int phone){return null;}
 }
