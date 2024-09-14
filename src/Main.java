@@ -164,8 +164,11 @@ public class Main {
      * Otherwise, the feedback message is "All contacts have different phone numbers".
      * @param cBook
      */
-    private static void getRepeated(ContactBook cBook) {
-
+    private static void getRepeated(Scanner in,ContactBook cBook) {
+        int phone;
+        phone = in.nextInt();
+        in.nextLine();
+        if (cBook.isRepeated(phone)) {
     }
 
     /**
