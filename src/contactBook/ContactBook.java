@@ -93,4 +93,11 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean hasContactPhone(int phone) {
+        return false;
+    }
+
+    public String getName(int phone) {
+        return "nome";
+    }
 }
