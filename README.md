@@ -2,6 +2,8 @@
 This work was done by 
 Lucas Marques nº65428 LEI
 Francisco Lima nº65466 LEI
+Tomás Simão nº66152 LEI
+
 
 This is a starter kit for the first lab of the Software Engineering Course.
 Fork this project to make your own version of it.
