@@ -114,5 +114,6 @@ public class ContactBook {
     }
 
     public String getName(int phone){return contacts[searchIndexNumber(phone)].getName();}
+
     public Contact getRepeated(int phone){return null;}
 }

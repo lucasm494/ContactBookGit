@@ -60,7 +60,7 @@ public class Main {
                     getNumber(in,cBook);
                     break;
                 case REPEATED:
-                    getRepeated(cBook);
+                    getRepeated(in,cBook);
                     break;
                 default:
                     System.out.println(COMMAND_ERROR);
@@ -165,10 +165,11 @@ public class Main {
      * @param cBook
      */
     private static void getRepeated(Scanner in,ContactBook cBook) {
-        int phone;
-        phone = in.nextInt();
+        int number;
+        number = in.nextInt();
         in.nextLine();
-        if (cBook.isRepeated(phone)) {
+        if (cBook.isRepeated(number)) {
+        }
     }
 
     /**
@@ -178,7 +179,7 @@ public class Main {
      * The operation fails if: (1) the phone number does not match any contact ("Phone number does not exist.").
      * @param cBook
      */
-    private static void getNumber(Scanner in,ContactBook cBook) {
+    private static void getNumber(Scanner in, ContactBook cBook) {
         String phone;
         phone = in.nextLine();
         int number =Integer.parseInt(phone);
@@ -188,3 +189,5 @@ public class Main {
         else System.out.println(NAME_NOT_EXIST);
     }
 }
+
+
